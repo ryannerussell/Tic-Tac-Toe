@@ -86,8 +86,8 @@
   <div id="board" aria-label="Game board"></div>
   <p id="score"></p>
   <div class="controls">
-    <button class="ctl" id="mode" aria-pressed="false">Play the computer</button>
-    <button class="ctl" id="reset">New game</button>
+    <button class="ctl" id="mode" aria-pressed="false">Play The Computer</button>
+    <button class="ctl" id="reset">New Game</button>
   </div>
 
 <script>
@@ -188,14 +188,14 @@
   }
 
   function renderScore() {
-    const o = vsComputer ? 'Computer': 'O';
+    const o = vsComputer ? 'Computer Score': 'O';
     scoreEl.textContent = 'X: ' + score.X + '   ' + o + ': ' + score.O + '   Draws: ' + score.draws;
   }
 
   modeBtn.addEventListener('click', () => {
     vsComputer = !vsComputer;
     modeBtn.setAttribute('aria-pressed', String(vsComputer));
-    modeBtn.textContent = vsComputer ? 'Playing the computer' : 'Play the computer';
+    modeBtn.textContent = vsComputer ? 'Playing the computer' : 'Play The Computer';
     score.X = score.O = score.draws = 0;
     newGame();
   });
