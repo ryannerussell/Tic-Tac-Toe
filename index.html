@@ -16,13 +16,13 @@
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #141c26;
-      --ink: #e6ebf1;
-      --x: #6b9bff;
-      --o: #f2bd2e;
+      --bg: #000000;
+      --ink: #f2f2f2;
+      --x: #d62828;
+      --o: #3b82f6;
       --line: #e6ebf1;
-      --cell: #1d2835;
-      --win: #27493a;
+      --cell: #1a1a1a;
+      --win: #1f4d2e;
     }
   }
   * { box-sizing: border-box; }
@@ -188,7 +188,7 @@
   }
 
   function renderScore() {
-    const o = vsComputer ? 'Computer' : 'O';
+    const o = vsComputer ? 'Computer': 'O';
     scoreEl.textContent = 'X: ' + score.X + '   ' + o + ': ' + score.O + '   Draws: ' + score.draws;
   }
 
